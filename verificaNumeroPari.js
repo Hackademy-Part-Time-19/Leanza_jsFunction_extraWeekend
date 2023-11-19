@@ -4,6 +4,13 @@
 
 alert("Buongiorno e benvenuto! Qui potrai verificare se è un numero è pari o dispari!")
 let operazione
+function verificaNumeroPari(numero) {
+    numeroPari = false;
+    if (numero % 2 == 0) {
+        numeroPari = true;
+    }
+    return numeroPari;
+}
 while (operazione != 2) {
 
     operazione = parseInt(prompt("Premi 1 per verificare un numero o 2 per uscire!"))
@@ -11,13 +18,7 @@ while (operazione != 2) {
     switch (operazione) {
         case 1:
             let numero = parseInt(prompt("Qual è il numero che vuoi verificare?"))
-            function verificaNumeroPari(numero) {
-                numeroPari = false;
-                if (numero % 2 == 0) {
-                    numeroPari = true;
-                }
-                return numeroPari;
-            }
+
             numeroPari = verificaNumeroPari(numero)
             if (numeroPari) {
                 alert("Il numero " + numero + " è pari");
